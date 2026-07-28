@@ -40,3 +40,7 @@ include/
 *.njsproj
 *.sln
 *.swp
+
+# Dynamic uploads and gradcam output images
+static/uploads/
+static/gradcam/
