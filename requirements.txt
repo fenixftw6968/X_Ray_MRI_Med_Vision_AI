@@ -1,0 +1,10 @@
+tensorflow>=2.11.0
+numpy
+opencv-python
+scikit-learn
+matplotlib
+flask
+psycopg2-binary
+ipykernel
+jupyter
+pandas

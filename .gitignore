@@ -1,0 +1,42 @@
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Large Model Files
+models/
+*.keras
+*.h5
+*.pkl
+*.pb
+
+# Datasets
+datasets/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+bin/
+lib/
+include/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
