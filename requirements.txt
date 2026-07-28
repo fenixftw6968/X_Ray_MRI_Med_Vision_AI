@@ -5,6 +5,8 @@ scikit-learn
 matplotlib
 flask
 psycopg2-binary
+pymongo
+dnspython
 ipykernel
 jupyter
 pandas
