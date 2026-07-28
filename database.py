@@ -34,9 +34,13 @@ DB_FILE = os.path.join(os.path.dirname(__file__), "medical.db")
 if USE_MONGO:
     try:
         mongo_client = MongoClient(MONGO_URI)
-        # Access database (default from URI or 'medical_db')
-        db_name = mongo_client.get_default_database().name if mongo_client.get_default_database() else "medical_db"
-        db = mongo_client[db_name]
+        # Access database (default from URI or fallback to 'medical_db' to avoid ConfigurationError)
+        try:
+            db = mongo_client.get_default_database()
+            if db is None:
+                db = mongo_client["medical_db"]
+        except Exception:
+            db = mongo_client["medical_db"]
     except Exception as e:
         print(f"MongoDB connection configuration error: {e}")
         db = None
