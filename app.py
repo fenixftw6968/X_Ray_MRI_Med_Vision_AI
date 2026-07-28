@@ -153,7 +153,7 @@ def predict_api():
             os.remove(image_path)
         return jsonify({"error": str(e)}), 500
 
-@app.route('/api/patients/<int:patient_id>/predictions', methods=['GET'])
+@app.route('/api/patients/<patient_id>/predictions', methods=['GET'])
 def get_predictions_api(patient_id):
     """Retrieves previous predictions for a patient."""
     try:
