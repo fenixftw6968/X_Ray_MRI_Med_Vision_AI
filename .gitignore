@@ -19,6 +19,10 @@ models/
 *.pkl
 *.pb
 
+# Do not ignore the specific trained model files for deployment
+!models/xray_model.keras
+!models/mri_model.keras
+
 # Datasets
 datasets/
 
