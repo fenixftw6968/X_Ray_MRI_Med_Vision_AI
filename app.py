@@ -32,8 +32,9 @@ def load_models_on_startup():
     If models do not exist yet (i.e. they are still training), 
     we print a warning but allow the Flask app to start.
     """
-    xray_path = "models/xray_model.keras"
-    mri_path = "models/mri_model.keras"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    xray_path = os.path.join(base_dir, "models", "xray_model.keras")
+    mri_path = os.path.join(base_dir, "models", "mri_model.keras")
     
     if os.path.exists(xray_path):
         print(f"Loading X-Ray model from {xray_path}...")
