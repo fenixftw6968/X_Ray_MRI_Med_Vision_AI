@@ -9,4 +9,5 @@ pymongo
 dnspython
 ipykernel
 jupyter
-pandas
+
+gunicorn
